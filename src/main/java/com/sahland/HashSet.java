@@ -1,11 +1,12 @@
 package com.sahland;
 
+import java.io.Serializable;
 import java.util.*;
 import java.util.HashMap;
 
 import static java.util.Collections.addAll;
 
-public class HashSet<E> {
+public class HashSet<E> extends AbstractSet<E> implements Set<E>, Cloneable, Serializable {
 
     private transient HashMap<E,Object> map; // ключ элемента Set, а значение - object
 
